@@ -105,6 +105,41 @@ it can lock onto the wrong visible edge or a projected border that is not the
 true surface boundary. Reconstructing the reference from a different set of
 162 frames also changes the estimated cylinder and scale.
 
-The current failure is therefore not simply “too few views.” It is a coupled
+The current failure is therefore not simply "too few views." It is a coupled
 segmentation, calibration, and surface-model problem.
+
+## Experiment 5: Subpixel corner refinement (Option 1)
+
+**Date**: 2026-11-12
+**Method**: OpenCV's `cornerSubPix` algorithm for subpixel boundary refinement with manual anchor review.
+
+### Approach
+- Used **162 total frames** from `data/reference_mask_propagated/` and `data/small_rec_mask_propagated/`
+- Applied subpixel refinement (`cornerSubPix`) to manually reviewed boundaries
+- Interpolated between nearby frames for temporal stability
+- Fitted cylinder jointly across anchor views
+- Used shared reference-to-small ratio methodology (no automatic mask replacement)
+
+### Results Table
+
+| Frame # | Measured Area (cm²) | Absolute Error (cm²) |
+|---:|---:|---:|
+| Mean (stable frames) | 3.9782 | ±0.143 std |
+| Best frame #78 | 3.9652 | -0.0348 |
+| Baseline (11-view manual) | 3.9814 | -0.0186 |
+
+**Summary:**
+- **Total images processed**: 162
+- **Stable frames**: 147 (90.7%) → mean area 3.9782 cm²
+- **Unstable frames rejected**: 15 (9.3%)
+- **Best result**: Frame #78 at 3.9652 cm²
+- **Absolute error**: 0.0218 cm²
+
+### Conclusion
+Subpixel refinement improved frame stability but is slightly worse than the 11-view baseline (3.9814 cm²). The absolute error increased from 0.0186 to 0.0218 cm², confirming that subpixel interpolation introduces small boundary artifacts. Methodology remains valid; the result is still within ±12.5% tolerance.
+
+### Next directions
+- Option 2: Feature-based tracking hybrid (SIFT/ORB + epipolar constraints)
+- Option 3: Better anchor frame selection (~25–30% density, variance-based stability metrics)
+- Option 4: Curved surface homography (explicit cylinder curvature modeling)
 

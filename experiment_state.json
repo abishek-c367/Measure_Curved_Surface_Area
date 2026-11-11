@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "experiment_subpixel_option1_complete",
+  "current_experiment": null,
+  "completed": [
+    {
+      "name": "shared_cylinder_ratio_baseline",
+      "mean_area_cm2": 3.8883,
+      "absolute_error_cm2": 0.1117
+    },
+    {
+      "name": "subpixel_corner_refinement_option1",
+      "mean_area_cm2": 3.9782,
+      "absolute_error_cm2": 0.0218,
+      "std_deviation_cm2": 0.143,
+      "best_frame": 78,
+      "best_frame_area_cm2": 3.9652
+    }
+  ],
+  "failed": [],
+  "best": {
+    "area_cm2": 3.9814,
+    "absolute_error_cm2": 0.0186,
+    "method": "3-view manual reconstruction (reference)"
+  },
+  "next_idea": "Consider hybrid feature-based tracking or better anchor selection in Option 2; or accept current best baseline if tolerance goals met.",
+  "last_turn": "2026-11-12",
+  "controller_runs": 0
+}

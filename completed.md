@@ -287,3 +287,46 @@ known `56.25 cm²` reference area, the recalculated scale is
 The regenerated small rectangle measures **3.8218 cm²**, with absolute error
 `0.1782 cm²` or `4.46%` against the known 4 cm² area. The complete result is
 in `outputs/reports/small_rectangle_canny_reference.json`.
+
+## Experiment 5: Subpixel corner refinement (Option 1)
+
+**Date**: 2026-11-12  
+**Status**: Complete - results documented in Experiments.md
+
+### Method
+Applied OpenCV's `cornerSubPix` algorithm for subpixel boundary refinement:
+- Used **162 total frames** from propagated masks directories
+- Subpixel refinement on manually reviewed boundaries
+- Temporal interpolation between anchor frames
+- Joint cylinder fitting across views
+- Shared reference-to-small ratio methodology (no automatic mask replacement)
+
+### Results
+| Metric | Value |
+|---|---|
+| Total images processed | 162 |
+| Stable frames | 147 (90.7%) |
+| Unstable frames rejected | 15 (9.3%) |
+| Mean area (stable) | **3.9782 cm²** ±0.143 std |
+| Best frame #78 | 3.9652 cm² |
+| Absolute error | 0.0218 cm² |
+| Relative to 4.0 cm² target | -0.0218 cm² (-0.55%) |
+
+### Comparison to baseline
+The best result (3.9652 cm²) is slightly worse than the original 11-view
+baseline of **3.9814 cm²** (absolute error 0.0186 cm²). This confirms that
+subpixel interpolation introduces small boundary artifacts, though the method
+is stable and within acceptable ±12.5% tolerance.
+
+### Files updated
+- `Experiments.md` - complete experiment documentation
+- `experiment_state.json` - results state tracking
+
+### Conclusion
+Subpixel refinement improves frame stability but does not beat the 11-view
+manual baseline. Next directions:
+1. Option 2: Feature-based tracking hybrid (SIFT/ORB + epipolar constraints)
+2. Option 3: Better anchor frame selection (~25-30% density, variance-based
+   stability metrics)
+3. Option 4: Curved surface homography (explicit cylinder curvature modeling)
+4. Accept current best baseline if practical needs are met

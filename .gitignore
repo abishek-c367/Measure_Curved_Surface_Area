@@ -24,6 +24,11 @@ outputs/*
 !outputs/reports/
 outputs/reports/*
 !outputs/reports/*.json
+experiment_logs/
+.experiment-loop.lock
+experiment_state.json.tmp
+ssh_agent
+ssh_agent.pub
 
 # Keep only the manually supplied anchor masks.
 !data/masks/

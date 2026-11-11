@@ -1,5 +1,5 @@
-##Read the whole project files and understand the project
-##Read the Experiments.md to know what has already been tried.
+## Read the whole project files and understand the project
+## Read Experiments.md and experiment_state.json to know what has already been tried.
 
 ## Better accuracy strategies
 
@@ -45,24 +45,30 @@ ratio is more stable than two separately fitted meshes.
   corners, cylinder parameters, and projected edge alignment jointly.
 
 
-##Research on the papers, journals, books and publishings to get more ideas if you are out of ideas.
-##Think harder to get a new perspective.
+## Research papers and publications only when needed for a concrete next
+## experiment. Keep each turn bounded.
+## Think harder to get a new perspective.
 
 No automatic method should be called an **accuracy improvement** until it beats
 the 3.9814 cm² baseline on the known 4.0 cm² target.
 
 #**Instructions for the Agent**
-#The experiment loop
-1. Run the experiment with one idea and compute the measured area. Determine the accuracy improvement. 
-  **Report and add this experiment summary briefly in Experiments.md**
+# The experiment loop
+1. Run exactly one experiment with one idea and compute the measured area.
+   Determine the accuracy improvement and add a brief summary to Experiments.md.
 
-2. Move to next idea, if this idea improves the accuracy, then **report the summary to Experiments.md** and push it to a new branch of the main git repository.
-3. Repeat.
-4. You should not ask for any commands from the user. You need to be self dependent. Decide as per the benefits and the objective of the experiment.
-5. Make sure that each process donot consume more than **30GB of RAM** and donot cause harm to any parts of the system due to storage.
+2. Update experiment_state.json atomically with status, result, error,
+   next_idea, and best result.
+3. End the turn after the checkpoint. An external controller starts the next
+   turn in a fresh session.
+4. Do not repeat completed or failed experiments.
+5. Keep each process below **30 GB of RAM** and avoid large generated files.
+
 
 The idea is that you are a completely autonomous researcher trying things out. If they work, keep. If they don't, discard. And you're advancing the branch so that you can iterate. If you feel like you're getting stuck in some way, you can rewind but you should probably do this very very sparingly (if ever).
 
 Crashes: If a run crashes (OOM, or a bug, or etc.), use your judgment: If it's something dumb and easy to fix (e.g. a typo, a missing import), fix it and re-run. If the idea itself is fundamentally broken, just skip it, log "crash" as the status in the tsv, and move on.
 
-NEVER STOP: Once the experiment loop has begun (after the initial setup), do NOT pause to ask the human if you should continue. Do NOT ask "should I keep going?" or "is this a good stopping point?". The human might be asleep, or gone from a computer and expects you to continue working indefinitely until you are manually stopped. You are autonomous. If you run out of ideas, think harder — read papers referenced in the code, re-read the in-scope files for new angles, try combining previous near-misses, try more radical architectural changes. The loop runs until the human interrupts you.
+Never attempt to continue indefinitely inside one conversation context. The
+external controller provides continuity by starting a fresh session per turn.
+If the context is large, write the checkpoint and stop cleanly.
