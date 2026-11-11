@@ -1,0 +1,248 @@
+{
+  "images": 200,
+  "anchors": 12,
+  "generated": 162,
+  "failed_frames": [
+    {
+      "frame": 41,
+      "from": 40,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 42,
+      "from": 40,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 43,
+      "from": 40,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 44,
+      "from": 40,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 45,
+      "from": 40,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 46,
+      "from": 40,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 47,
+      "from": 40,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 48,
+      "from": 40,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 49,
+      "from": 40,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 71,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 72,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 73,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 74,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 75,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 76,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 77,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 78,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 79,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 81,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 82,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 83,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 84,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 85,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 86,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 87,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 88,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 89,
+      "from": 80,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 130,
+      "from": 135,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 131,
+      "from": 135,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 132,
+      "from": 135,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 133,
+      "from": 135,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 134,
+      "from": 135,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 170,
+      "from": 176,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 171,
+      "from": 176,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 172,
+      "from": 176,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 173,
+      "from": 176,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 174,
+      "from": 176,
+      "error": "Fallback flow left image during tracking."
+    },
+    {
+      "frame": 175,
+      "from": 176,
+      "error": "Fallback flow left image during tracking."
+    }
+  ],
+  "anchor_diagnostics": {
+    "100": {
+      "hough_segments": 88,
+      "aspect_ratio": 1.0336318016052246
+    },
+    "60": {
+      "hough_segments": 79,
+      "aspect_ratio": 1.419607162475586
+    },
+    "1": {
+      "hough_segments": 77,
+      "aspect_ratio": 1.1640366315841675
+    },
+    "180": {
+      "hough_segments": 61,
+      "aspect_ratio": 1.0541459321975708
+    },
+    "200": {
+      "hough_segments": 65,
+      "aspect_ratio": 1.1566896438598633
+    },
+    "20": {
+      "hough_segments": 94,
+      "aspect_ratio": 1.0817943811416626
+    },
+    "80": {
+      "hough_segments": 90,
+      "aspect_ratio": 1.4988495111465454
+    },
+    "40": {
+      "hough_segments": 59,
+      "aspect_ratio": 1.097375750541687
+    },
+    "140": {
+      "hough_segments": 60,
+      "aspect_ratio": 1.91013503074646
+    },
+    "30": {
+      "hough_segments": 86,
+      "aspect_ratio": 1.1098155975341797
+    },
+    "120": {
+      "hough_segments": 70,
+      "aspect_ratio": 1.148705244064331
+    },
+    "160": {
+      "hough_segments": 50,
+      "aspect_ratio": 1.7427403926849365
+    }
+  },
+  "method": "Canny/Hough quadrilateral, LK forward/backward tracking, local Canny correction"
+}
