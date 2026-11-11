@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-11-11T07:44:45.304685+00:00",
+  "surface_area": 3.458977963291443,
+  "area_unit": "COLMAP_units^2 (arbitrary scale)",
+  "surface_area_cm2": null,
+  "scale_cm_per_colmap_unit": null,
+  "vertex_count": 18216,
+  "triangle_count": 35791,
+  "burn_point_count": 6528969,
+  "registered_image_count": 200,
+  "is_open_surface_patch": true,
+  "clinical_validation": "not clinically validated",
+  "settings": {
+    "min_views": 5,
+    "depth_relative_tolerance": 0.005,
+    "voxel_size": 0.001,
+    "surface_model": "cylindrical",
+    "bpa_radii_multipliers": null,
+    "foreground_min_views": 20,
+    "cylinder_radius": 1.4642127201683595,
+    "cylinder_residual_median": 0.10584577852848365,
+    "cylinder_residual_p95": 0.2694395070591694
+  }
+}

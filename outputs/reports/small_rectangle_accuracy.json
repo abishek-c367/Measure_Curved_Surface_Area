@@ -1,0 +1,31 @@
+{
+  "true_area_cm2": 4.0,
+  "baseline": {
+    "views": 11,
+    "points": 208036,
+    "area_colmap_units2": 0.14559615173138407,
+    "cylinder_radius": 0.6824543673620245,
+    "cylinder_residual_median": 0.006880198548885774,
+    "cylinder_residual_p95": 0.02041776512910276,
+    "mesh_triangles": 33364,
+    "scale_cm_per_colmap_unit": 5.247166009818606,
+    "area_cm2": 4.008662611775034,
+    "absolute_error_cm2": 0.008662611775034357,
+    "relative_error_percent": 0.21656529437585892
+  },
+  "propagated": {
+    "views": 196,
+    "points": 2354559,
+    "area_colmap_units2": 0.14191164085748875,
+    "cylinder_radius": 0.556110804141585,
+    "cylinder_residual_median": 0.008169343769779625,
+    "cylinder_residual_p95": 0.024332859520787887,
+    "mesh_triangles": 34132,
+    "scale_cm_per_colmap_unit": 5.247166009818606,
+    "area_cm2": 3.907217890831363,
+    "absolute_error_cm2": 0.09278210916863694,
+    "relative_error_percent": 2.3195527292159235
+  },
+  "accuracy_gain_cm2": -0.08411949739360258,
+  "accuracy_gain_percent_of_baseline_error": -971.0639190369229
+}

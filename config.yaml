@@ -1,0 +1,44 @@
+paths:
+  images_dir: data/images
+  masks_dir: data/masks
+  workspace_dir: data/colmap_output
+  database_path: data/colmap_output/database.db
+  sparse_dir: data/sparse
+  dense_dir: data/colmap_output/dense
+  output_pointcloud_dir: outputs/pointcloud
+  output_mesh_dir: outputs/mesh
+  output_reports_dir: outputs/reports
+
+colmap:
+  colmap_executable: scripts/colmap
+  camera_model: OPENCV
+  single_camera: true
+  max_image_size: -1
+  use_gpu: true
+  num_threads: -1
+  matcher: exhaustive
+  geom_consistency: true
+  window_radius: 5
+  window_step: 1
+  num_samples: 15
+  num_iterations: 5
+
+reconstruction:
+  min_views: 5
+  depth_relative_tolerance: 0.005
+  max_points_per_image: 50000
+  voxel_size: 0.001
+  statistical_outlier_neighbors: 20
+  statistical_outlier_std_ratio: 2.0
+
+meshing:
+  surface_model: cylindrical
+  bpa_radii_multipliers: [1.5, 2.5, 4.0]
+  remove_small_components: true
+  min_component_triangles: 20
+  foreground_min_views: 20
+  cylinder_axial_resolution: 160
+  cylinder_angular_resolution: 160
+
+measurement:
+  cm_per_colmap_unit: null

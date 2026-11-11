@@ -1,0 +1,27 @@
+{
+  "true_area_cm2": 4.0,
+  "reference": {
+    "views": 162,
+    "points": 2116843,
+    "area_colmap_units2": 2.085104709856426,
+    "cylinder_radius": 3.502211359640765,
+    "cylinder_residual_median": 0.010686187329579155,
+    "cylinder_residual_p95": 0.03870172949387873,
+    "mesh_triangles": 47167,
+    "area_cm2": 56.249999999999986
+  },
+  "small_rectangle": {
+    "views": 196,
+    "points": 2363493,
+    "area_colmap_units2": 0.14166686777801982,
+    "cylinder_radius": 0.57018271195466,
+    "cylinder_residual_median": 0.007962673216079796,
+    "cylinder_residual_p95": 0.023873697425337417,
+    "mesh_triangles": 33603,
+    "scale_cm_per_colmap_unit": 5.193944788226726,
+    "area_cm2": 3.8217559410061077,
+    "absolute_error_cm2": 0.17824405899389228,
+    "relative_error_percent": 4.456101474847307
+  },
+  "reference_area_calibration_cm2": 56.25
+}

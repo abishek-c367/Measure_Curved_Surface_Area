@@ -1,0 +1,18 @@
+{
+  "large_area_colmap_units2": 2.0430214083953353,
+  "small_area_colmap_units2": 0.14460593765500845,
+  "reference_area_cm2": 56.25,
+  "scale_cm_per_colmap_unit": 5.247166009818606,
+  "small_area_cm2": 3.9813992940402114,
+  "large_views": 11,
+  "small_views": 11,
+  "large_points": 440279,
+  "small_points": 228905,
+  "large_cylinder_radius": 3.9066239133092147,
+  "small_cylinder_radius": 0.9430221749360161,
+  "large_cylinder_residual_median": 0.008344528057445455,
+  "large_cylinder_residual_p95": 0.03510360342599681,
+  "small_cylinder_residual_median": 0.00391110697217445,
+  "small_cylinder_residual_p95": 0.01190412542272292,
+  "method": "Same 11 frames; masks resized nearest-neighbour to depth resolution; min cross-view support 3; cylinder-constrained mesh; foreground triangle support 3."
+}

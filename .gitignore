@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.tools/
+
+# Large source and reconstruction artifacts.
+data/videos/
+data/images/
+data/colmap_output/
+data/sparse/
+data/masks/*.png
+data/small_rec_mask_propagated/
+!data/small_rec_mask_propagated/
+data/small_rec_mask_propagated/*
+!data/small_rec_mask_propagated/propagation_report.json
+data/reference_mask_propagated/
+!data/reference_mask_propagated/
+data/reference_mask_propagated/*
+!data/reference_mask_propagated/propagation_report.json
+outputs/
+!outputs/
+outputs/*
+!outputs/reports/
+outputs/reports/*
+!outputs/reports/*.json
+
+# Keep only the manually supplied anchor masks.
+!data/masks/
+data/masks/*
+!data/masks/.gitkeep
+!data/masks/frame_*_mask.jpg
+!data/small_rec_mask/
+data/small_rec_mask/*
+!data/small_rec_mask/frame_*_small_rec.jpg

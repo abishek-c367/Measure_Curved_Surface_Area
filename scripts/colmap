@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+colmap_root="$root/.tools/colmap-cuda"
+cuda_root="$root/.tools/cuda12/usr/local/cuda-12.8/targets/x86_64-linux/lib"
+system_root="$root/.tools/cuda12/usr/lib/x86_64-linux-gnu"
+
+if [[ ! -x "$colmap_root/bin/colmap" ]]; then
+    printf 'COLMAP is not installed at %s\n' "$colmap_root" >&2
+    printf 'Download the Ubuntu 24.04 CUDA build and extract it there.\n' >&2
+    exit 1
+fi
+
+export LD_LIBRARY_PATH="$colmap_root/lib:$cuda_root:$system_root${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+exec "$colmap_root/bin/colmap" "$@"

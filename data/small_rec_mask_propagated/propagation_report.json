@@ -1,0 +1,73 @@
+{
+  "images": 200,
+  "anchors": 11,
+  "generated": 196,
+  "failed_frames": [
+    {
+      "frame": 91,
+      "from": 92,
+      "error": "Forward/backward tracking error too high: 82.03px"
+    },
+    {
+      "frame": 191,
+      "from": 193,
+      "error": "Forward/backward tracking error too high: 133.08px"
+    },
+    {
+      "frame": 192,
+      "from": 193,
+      "error": "Forward/backward tracking error too high: 133.08px"
+    },
+    {
+      "frame": 130,
+      "error": "Generated rectangle is outside the larger reference mask."
+    }
+  ],
+  "anchor_diagnostics": {
+    "60": {
+      "hough_segments": 44,
+      "aspect_ratio": 1.3421663045883179
+    },
+    "80": {
+      "hough_segments": 52,
+      "aspect_ratio": 1.4182361364364624
+    },
+    "140": {
+      "hough_segments": 34,
+      "aspect_ratio": 1.2521549463272095
+    },
+    "160": {
+      "hough_segments": 36,
+      "aspect_ratio": 1.560355544090271
+    },
+    "1": {
+      "hough_segments": 46,
+      "aspect_ratio": 1.0799458026885986
+    },
+    "180": {
+      "hough_segments": 39,
+      "aspect_ratio": 1.028681993484497
+    },
+    "40": {
+      "hough_segments": 49,
+      "aspect_ratio": 1.0603104829788208
+    },
+    "120": {
+      "hough_segments": 44,
+      "aspect_ratio": 1.0922750234603882
+    },
+    "200": {
+      "hough_segments": 33,
+      "aspect_ratio": 1.1238397359848022
+    },
+    "100": {
+      "hough_segments": 47,
+      "aspect_ratio": 1.024619460105896
+    },
+    "20": {
+      "hough_segments": 43,
+      "aspect_ratio": 1.0120444297790527
+    }
+  },
+  "method": "Canny/Hough quadrilateral, LK forward/backward tracking, local Canny correction"
+}
